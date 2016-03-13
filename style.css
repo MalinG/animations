@@ -1,3 +1,16 @@
+body {
+  font-family: sans-serif;
+  margin-top: 30px;
+}
+
+h1 {
+  text-align: center;
+}
+
+h2 {
+  text-align: center;
+  margin-top: 0;
+}
 .demo {
   max-width: 600px;
   background: #eee;
@@ -8,11 +21,7 @@
   padding: 20px;
 }
 
-h2 {
-  text-align: center;
-  margin-top: 0;
-}
-
+/* Flower style menu */
 .menu-wrapper {
   position: absolute;
   left: 50%;
@@ -64,7 +73,7 @@ h2 {
 .open .menu-item {
   width: 50px;
   height: 50px;
-  background-size: 25px;
+  background-size: 50%;
 }
 
 .open .menu-item--add {
@@ -87,12 +96,51 @@ h2 {
   position: absolute;
   left: 50%;
   top: 50%;
-  transform: translate(-50%, -50%) rotate(-180deg);
+  transform: translate(-50%, -50%);
   transition: transform 0.2s;
   background: url('./images/expand_more.svg') no-repeat center;
   background-size: cover;
 }
 
 .open .expand {
+  transform: translate(-50%, -50%) rotate(-180deg);
+}
+
+/* Vertical menu */
+
+.menu-wrapper--vertical {
+  top: 100px;
+}
+
+.menu-toggle--vertical {
+  width: 40px;
+  height: 40px;
+}
+
+.open .menu-item--vertical {
+  width: 40px;
+  height: 40px;
+  background-size: 50%;
+}
+
+.expand--vertical {
+  transform: translate(-50%, -50%) rotate(-90deg);
+}
+
+.open .expand--vertical {
   transform: translate(-50%, -50%) rotate(0);
+}
+
+.open .menu-item--add.menu-item--vertical {
+  left: 0;
+  top: 50px;
+}
+.open .menu-item--edit.menu-item--vertical {
+  left: 0;
+  top: 100px;
+}
+
+.open .menu-item--remove.menu-item--vertical {
+  left: 0;
+  top: 150px;
 }
